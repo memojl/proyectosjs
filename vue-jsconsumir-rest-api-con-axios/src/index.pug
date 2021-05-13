@@ -1,0 +1,35 @@
+.container-fluid#app
+	.row
+		.col-sm-12
+			h1 Vue.js + Axios
+			form(
+				@submit.prevent='leerAPI'
+			)
+				.form-group
+					label.control-label Cantidad de resultados
+					.input-group
+						input.form-control(
+							v-model='cantidadResultados'
+						)
+						span.input-group-btn
+							button.btn.btn-primary(
+								type='submit'
+							) Mostrar
+			table.table.table-hover.table-striped
+				thead
+					tr
+						th ID
+						th Nombre
+						th Apellidos
+						th Imagen
+				tbody
+					tr(
+						v-for='usuario in usuarios'
+					)
+						td {{ usuario.id }}
+						td {{ usuario.first_name }}
+						td {{ usuario.last_name }}
+						td
+							img(
+								:src='usuario.avatar'
+							)
