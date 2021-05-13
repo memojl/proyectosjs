@@ -78,15 +78,7 @@ var firebaseConfig = {
     console.log(productoId);
     refTable1.child(productoId).once('value',function(datos){
     //refTable1.ref(productoId).on('child_added',function(datos){
-        valor=datos.val();
-        codigo = valor.codigo;
-        descripcion = valor.descripcion;
-        cantidad = valor.cantidad;
-
-        $('#Id').val(productoId);
-        $('#codigo').val(codigo);
-        $('#descripcion').val(descripcion);
-        $('#cantidad').val(cantidad);
+        valor=datos.val();console.log(valor);
     });
     edit = true;
   });
