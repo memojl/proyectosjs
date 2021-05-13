@@ -64,12 +64,8 @@ var firebaseConfig = {
     }
     console.log('Se ha '+action+' el registro');
     $("#form1").trigger('reset');
-    $('#exampleModal').modal('hide');
     edit = false;
-  });
-
-  $('.btn-add').click(function(){
-    $("#form1").trigger('reset');    
+    $('#exampleModal').modal('hide');
   });
 
   //Form_Editar
@@ -78,7 +74,15 @@ var firebaseConfig = {
     console.log(productoId);
     refTable1.child(productoId).once('value',function(datos){
     //refTable1.ref(productoId).on('child_added',function(datos){
-        valor=datos.val();console.log(valor);
+        valor=datos.val();
+        codigo = valor.codigo;
+        descripcion = valor.descripcion;
+        cantidad = valor.cantidad;
+
+        $('#Id').val(productoId);
+        $('#codigo').val(codigo);
+        $('#descripcion').val(descripcion);
+        $('#cantidad').val(cantidad);
     });
     edit = true;
   });

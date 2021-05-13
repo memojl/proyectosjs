@@ -2,7 +2,7 @@ self.addEventListener('install', function(event) {
   console.log('[Service Worker] Installing Service Worker ...', event);
   event.waitUntil(
     caches.open('static').then(function(cache) {
-      cache.addAll(['/proyectosjs/login-fire/firebase-auth-example/', '/proyectosjs/login-fire/firebase-auth-example/index.html', '/proyectosjs/login-fire/firebase-auth-example/bloques/WPA/appCon.js', '/proyectosjs/login-fire/firebase-auth-example/bloques/WPA/manifest.json']);
+      cache.addAll(['/MisSitios/proyectosjs/login-fire/firebase-auth-example/', '/MisSitios/proyectosjs/login-fire/firebase-auth-example/index.html', '/MisSitios/proyectosjs/login-fire/firebase-auth-example/bloques/WPA/appCon.js', '/MisSitios/proyectosjs/login-fire/firebase-auth-example/bloques/WPA/manifest.json']);
     })
   );
 });

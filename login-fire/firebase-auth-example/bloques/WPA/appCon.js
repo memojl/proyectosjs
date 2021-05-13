@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('/proyectosjs/login-fire/firebase-auth-example/sw.js')
+    .register('/MisSitios/proyectosjs/login-fire/firebase-auth-example/sw.js')
     .then(function(registration) {
       console.log(
         'Service Worker registration successful with scope: ',
